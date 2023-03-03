@@ -5,19 +5,28 @@
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     </head>
     <body>
+        <!-- browser unsupported msg -->
         <p>Your browser does not support A-Frame.
         Please check the system requirements.</p>
-        <a href = "https://aframe.io/docs/1.0.4/introduction/vr-headsets-and-webvr-browsers.html#which-browsers-does-a-frame-support">Go 		  here</a>
+        <a href = "https://aframe.io/docs/1.0.4/introduction/vr-headsets-and-webvr-browsers.html#which-browsers-does-a-frame-support">Go here</a>
+        
+        <!-- loading screen -->
         <a-scene loading-screen="dotsColor: blue; backgroundColor: white"></a-scene>
         <a-scene>
+            
+        <!-- Sets up camera -->
         <a-entity camera look-controls wasd-controls="acceleration:100" position="0 1.6 0"></a-entity>
         <a-entity position="0 -0.5 1">
         <a-camera></a-camera>
         </a-entity>
+          
+        <!-- assets -->
         <a-assets>
             <img id="earth" src="https://raw.githubusercontent.com/LTV2008/sph1/main/texture1.png">
         </a-assets>
         <a-sky color="#EEEEEE"></a-sky>
+            
+        <!-- adds sphere -->
         <a-sphere
             material="src:#earth; metalness: ; roughness: 0;"
             radius="2"
@@ -32,6 +41,7 @@
             "
         ></a-sphere>
         </a-scene>
+        
         <!-- Author: LTV2008 - Forked from: Globe - Andy B. on CodeHS -->
     </body>
 </html>
